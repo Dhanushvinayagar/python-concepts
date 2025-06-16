@@ -1,0 +1,4 @@
+name rollno section total
+John 1 A 499
+Hawk 2 B 450
+Mike 3 D 480
