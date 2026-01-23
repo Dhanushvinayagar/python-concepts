@@ -71,3 +71,7 @@ print(list(li))
 print(li[::-1])
 print(li[0:3])
 print(li[-5:2])
+
+
+if [1] in [[1],[2],[3]]:
+    print("Present")

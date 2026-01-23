@@ -7,6 +7,10 @@ di["city"] = "New York"
 print(di["name"])
 print(di["age"])
 print(di["city"])
+try:
+    print(di["address"]) #throws error
+except Exception as e:
+    print('Error while accessing ',e)
 
 for key in di:
     print(key, di[key])
