@@ -1,4 +1,4 @@
-
+# recursive backtracking 
 def find_word_paths(board, word):
     r = len(board)
     c = len(board[0])
