@@ -2,22 +2,19 @@
 
 def target_sum_length(li,target):
     l = 0
-    r = 1
+    window_sum = 0
+    result = len(li)
 
-    while l<r and l<len(li):
-    
-        s = li[l]
-        t = l+1
-        while t<len(li) and s < target:
-            s+=li[t]
-            if t>r:
-                r+=1
-            t+=1
-        print(l,r, "Sum : ",s , " with range : ", r-l+1)
-        l+=1
+    for r in range(len(li)):
+        window_sum += li[r]          # expand
 
+        while window_sum >= target:  
+            result = min(result, r - l + 1)  
+            window_sum -= li[l]      # shrink
+            l += 1
 
-    return
+    print(result)
+    return  
 
 li = [2,3,1,2,1,4,3,0]
 
